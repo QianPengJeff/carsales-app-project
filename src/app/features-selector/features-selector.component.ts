@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-features-selector',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./features-selector.component.css']
 })
 export class FeaturesSelectorComponent implements OnInit {
+
+  @Input() public parentData;
 
   constructor() { }
 
