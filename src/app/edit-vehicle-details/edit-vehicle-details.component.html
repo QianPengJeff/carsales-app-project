@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+      <div class="card">
+        <h5 class="card-header">Car {{vehicle?.id}}</h5>
+        <div class="card-body">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="madeSelections">Made</label>
+              </div>
+              <select class="custom-select" id="madeSelections" [(ngModel)]="made">
+                <option *ngFor="let made of madeList" [value]="made.name">
+                    {{made.name}}
+                </option>
+              </select>
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="modelSelections">Model</label>
+              </div>
+              <select class="custom-select" id="modelSelections" [(ngModel)]="model">
+                <option *ngFor="let model of modelList" [value]="model.name">
+                    {{model.name}}
+                </option>
+              </select>
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="wheelsSelections">Wheels</label>
+              </div>
+              <select class="custom-select" id="wheelsSelections" [(ngModel)]="wheels">
+                <option *ngFor="let wheels of wheelsList" [value]="wheels.number">
+                    {{wheels.number}}
+                </option>
+              </select>
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="carTypeSelections">Car Type</label>
+              </div>
+              <select class="custom-select" id="carTypeSelections" [(ngModel)]="carType">
+                <option *ngFor="let carType of carTypeList" [value]="carType.name">
+                    {{carType.name}}
+                </option>
+              </select>
+            </div>
+          <button class="btn btn-primary">Edit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

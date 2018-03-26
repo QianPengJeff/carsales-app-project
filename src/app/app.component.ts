@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  // data = [];
+
+  constructor (){
+    // fetch('http://localhost:4000/vehicles')
+    //   .then(response => response.json())
+    //   .then(json => {
+    //
+    //     setTimeout(_ => {
+    //         this.data = json;
+    //         console.log(this.data);
+    //     }, 2000);
+    //
+    //   });
+
+  }
 }
