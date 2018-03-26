@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,9 +12,10 @@ import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { EditVehicleDetailsComponent } from './edit-vehicle-details/edit-vehicle-details.component';
 import { AddVehicleComponent } from './add-vehicle/add-vehicle.component';
 
-import { MadeService } from './services/made.service'
-import { ModelService } from './services/model.service'
-import { WheelsService } from './services/wheels.service'
+import { MadeService } from './services/made.service';
+import { ModelService } from './services/model.service';
+import { WheelsService } from './services/wheels.service';
+import { CarTypeService } from './services/car-type.service';
 
 const appRoutes: Routes = [
   { path: '', component: VehicleListComponent },
@@ -32,12 +34,13 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     AccordionModule.forRoot(),
     RouterModule.forRoot(
       appRoutes
     )
   ],
-  providers: [MadeService,ModelService,WheelsService],
+  providers: [MadeService,ModelService,WheelsService,CarTypeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

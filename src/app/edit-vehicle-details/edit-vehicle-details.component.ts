@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MadeService } from '../services/made.service';
 import { ModelService } from '../services/model.service';
 import { WheelsService } from '../services/wheels.service';
+import { CarTypeService } from '../services/car-type.service';
 
 
 @Component({
@@ -35,7 +36,8 @@ export class EditVehicleDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private _madeList: MadeService,
               private _modelList: ModelService,
-              private _wheelsList: WheelsService) {
+              private _wheelsList: WheelsService,
+              private _carTypeList: CarTypeService) {
 
   }
 
@@ -43,6 +45,7 @@ export class EditVehicleDetailsComponent implements OnInit {
     this.madeList = this._madeList.getMadeData();
     this.modelList = this._modelList.getModelData();
     this.wheelsList = this._wheelsList.getWheelsData();
+    this._carTypeList.getCarTypeData().subscribe(data => this.carTypeList = data);
 
 
     let id = parseInt(this.route.snapshot.paramMap.get('id'));
@@ -59,13 +62,5 @@ export class EditVehicleDetailsComponent implements OnInit {
             console.log(this.vehicle);
         }, 100);
       });
-      fetch('http://localhost:4000/carType')
-        .then(response => response.json())
-        .then(json => {
-          setTimeout(_ => {
-              this.carTypeList = json;
-              console.log(this.carTypeList);
-          }, 100);
-        });
   }
 }
