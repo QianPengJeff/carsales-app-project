@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute } from '@angular/router';
+import { MadeService } from '../services/made.service';
+import { ModelService } from '../services/model.service';
+import { WheelsService } from '../services/wheels.service';
+
 
 @Component({
   selector: 'app-edit-vehicle-details',
@@ -12,70 +16,35 @@ export class EditVehicleDetailsComponent implements OnInit {
 
   private vehicle;
 
-  private madeList =[
-      {
-         "id":1,
-         "name":"Audi"
-      },
-      {
-         "id":2,
-         "name":"BMW"
-      },
-      {
-         "id":3,
-         "name":"Ford"
-      },
-      {
-         "id":4,
-         "name":"Holden"
-      },
-      {
-         "id":5,
-         "name":"Hyundai"
-      }
-   ];
+  private madeList = [];
 
-  private modelList = [
-      {
-         "id":1,
-         "name":"A1"
-      },
-      {
-         "id":2,
-         "name":"A2"
-      },
-      {
-         "id":3,
-         "name":"A3"
-      },
-      {
-         "id":4,
-         "name":"A4"
-      },
-      {
-         "id":5,
-         "name":"A5"
-      }
-   ];
+  private modelList = [];
 
-   private wheelsList =[
-      {
-         "id":1,
-         "number":4
-      },
-      {
-         "id":2,
-         "number":6
-      }
-   ];
+  private wheelsList = [];
 
-  private made,model,wheels,carType,carTypeList;
+  private made;
 
-  constructor(private route: ActivatedRoute) {
+  private model;
+
+  private wheels;
+
+  private carType;
+
+  private carTypeList;
+
+  constructor(private route: ActivatedRoute,
+              private _madeList: MadeService,
+              private _modelList: ModelService,
+              private _wheelsList: WheelsService) {
 
   }
 
   ngOnInit() {
+    this.madeList = this._madeList.getMadeData();
+    this.modelList = this._modelList.getModelData();
+    this.wheelsList = this._wheelsList.getWheelsData();
+
+
     let id = parseInt(this.route.snapshot.paramMap.get('id'));
     this.carId = id;
     fetch('http://localhost:4000/vehicles/' + id)

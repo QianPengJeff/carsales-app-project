@@ -11,6 +11,10 @@ import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { EditVehicleDetailsComponent } from './edit-vehicle-details/edit-vehicle-details.component';
 import { AddVehicleComponent } from './add-vehicle/add-vehicle.component';
 
+import { MadeService } from './services/made.service'
+import { ModelService } from './services/model.service'
+import { WheelsService } from './services/wheels.service'
+
 const appRoutes: Routes = [
   { path: '', component: VehicleListComponent },
   { path: 'add', component: AddVehicleComponent },
@@ -33,7 +37,7 @@ const appRoutes: Routes = [
       appRoutes
     )
   ],
-  providers: [],
+  providers: [MadeService,ModelService,WheelsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
