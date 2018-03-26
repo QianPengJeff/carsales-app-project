@@ -1,9 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="offset-md-3 col-md-6">
+    <div class="col-md-10 offset-md-1">
       <div class="card">
         <h5 class="card-header">Car {{vehicle?.id}}</h5>
         <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
             <div class="input-group">
               <div class="input-group-prepend">
                 <label class="input-group-text" for="madeSelections">Made</label>
@@ -44,7 +46,11 @@
                 </option>
               </select>
             </div>
+          </div>
+        <div class="col">
             <app-features-selector [parentData]="vehicle"></app-features-selector>
+          </div>
+              </div>
           <button class="btn btn-primary">Edit</button>
         </div>
       </div>
