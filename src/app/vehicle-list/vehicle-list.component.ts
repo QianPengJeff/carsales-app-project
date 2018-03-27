@@ -14,18 +14,15 @@ export class VehicleListComponent implements OnInit {
     fetch('http://localhost:4000/vehicles')
       .then(response => response.json())
       .then(json => {
-
         setTimeout(_ => {
             this.data = json;
             console.log(this.data);
-        }, 2000);
-
+        }, 1000);
       });
 
   }
 
   onClickMe(car){
-    console.log(car);
     this.router.navigate(['edit',car.id]);
   }
 

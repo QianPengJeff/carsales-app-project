@@ -1,157 +1,154 @@
-{  
-   "made":[  
-      {  
-         "id":1,
-         "name":"Audi"
-      },
-      {  
-         "id":2,
-         "name":"BMW"
-      },
-      {  
-         "id":3,
-         "name":"Ford"
-      },
-      {  
-         "id":4,
-         "name":"Holden"
-      },
-      {  
-         "id":5,
-         "name":"Hyundai"
-      }
-   ],
-   "model":[  
-      {  
-         "id":1,
-         "name":"A1"
-      },
-      {  
-         "id":2,
-         "name":"A2"
-      },
-      {  
-         "id":3,
-         "name":"A3"
-      },
-      {  
-         "id":4,
-         "name":"A4"
-      },
-      {  
-         "id":5,
-         "name":"A5"
-      }
-   ],
-   "wheels":[  
-      {  
-         "id":1,
-         "number":4
-      },
-      {  
-         "id":2,
-         "number":6
-      }
-   ],
-   "carType":[  
-      {  
-         "id":1,
-         "name":"hatchback"
-      },
-      {  
-         "id":2,
-         "name":"sedan"
-      }
-   ],
-   "features":[  
-      {  
-         "id":1,
-         "name":"Airbags"
-      },
-      {  
-         "id":2,
-         "name":"Seatbelts"
-      },
-      {  
-         "id":3,
-         "name":"Bluetooth"
-      },
-      {  
-         "id":4,
-         "name":"Navigation"
-      },
-      {  
-         "id":5,
-         "name":"Aircon"
-      }
-   ],
-   "vehicles":[  
-      {  
-         "id":1,
-         "made":"Audi",
-         "model":"A1",
-         "wheels":4,
-         "carType":"hatchback",
-         "features":[  
-            "Airbags",
-            "Seatbelts",
-            "Navigation",
-            "Aircon"
-         ]
-      },
-      {  
-         "id":2,
-         "made":"Ford",
-         "model":"A3",
-         "wheels":4,
-         "carType":"hatchback",
-         "features":[  
-            "Airbags",
-            "Seatbelts",
-            "Navigation",
-            "Aircon"
-         ]
-      },
-      {  
-         "id":3,
-         "made":"Holden",
-         "model":"A2",
-         "wheels":6,
-         "carType":"hatchback",
-         "features":[  
-            "Airbags",
-            "Seatbelts",
-            "Navigation",
-            "Aircon"
-         ]
-      },
-      {  
-         "id":4,
-         "made":"Ford",
-         "model":"A3",
-         "wheels":4,
-         "carType":"sedan",
-         "features":[  
-            "Airbags",
-            "Seatbelts",
-            "Navigation",
-            "Aircon",
-            "Bluetooth"
-         ]
-      },
-      {  
-         "id":5,
-         "made":"Hyundai",
-         "model":"A5",
-         "wheels":4,
-         "carType":"sedan",
-         "features":[  
-            "Airbags",
-            "Seatbelts",
-            "Navigation",
-            "Aircon",
-            "Bluetooth"
-         ]
-      }
-   ]
+{
+  "made": [
+    {
+      "id": 1,
+      "name": "Audi"
+    },
+    {
+      "id": 2,
+      "name": "BMW"
+    },
+    {
+      "id": 3,
+      "name": "Ford"
+    },
+    {
+      "id": 4,
+      "name": "Holden"
+    },
+    {
+      "id": 5,
+      "name": "Hyundai"
+    }
+  ],
+  "model": [
+    {
+      "id": 1,
+      "name": "A1"
+    },
+    {
+      "id": 2,
+      "name": "A2"
+    },
+    {
+      "id": 3,
+      "name": "A3"
+    },
+    {
+      "id": 4,
+      "name": "A4"
+    },
+    {
+      "id": 5,
+      "name": "A5"
+    }
+  ],
+  "wheels": [
+    {
+      "id": 1,
+      "number": 4
+    },
+    {
+      "id": 2,
+      "number": 6
+    }
+  ],
+  "carType": [
+    {
+      "id": 1,
+      "name": "hatchback"
+    },
+    {
+      "id": 2,
+      "name": "sedan"
+    }
+  ],
+  "features": [
+    {
+      "id": 1,
+      "name": "Airbags"
+    },
+    {
+      "id": 2,
+      "name": "Seatbelts"
+    },
+    {
+      "id": 3,
+      "name": "Bluetooth"
+    },
+    {
+      "id": 4,
+      "name": "Navigation"
+    },
+    {
+      "id": 5,
+      "name": "Aircon"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": 1,
+      "made": "Audi",
+      "model": "A1",
+      "wheels": "6",
+      "carType": "hatchback",
+      "features": [
+        "Airbags"
+      ]
+    },
+    {
+      "id": 2,
+      "made": "Ford",
+      "model": "A3",
+      "wheels": 4,
+      "carType": "hatchback",
+      "features": [
+        "Airbags",
+        "Seatbelts",
+        "Navigation",
+        "Aircon"
+      ]
+    },
+    {
+      "id": 3,
+      "made": "Holden",
+      "model": "A2",
+      "wheels": 6,
+      "carType": "hatchback",
+      "features": [
+        "Airbags",
+        "Seatbelts",
+        "Navigation",
+        "Aircon"
+      ]
+    },
+    {
+      "id": 4,
+      "made": "Ford",
+      "model": "A3",
+      "wheels": 4,
+      "carType": "sedan",
+      "features": [
+        "Airbags",
+        "Seatbelts",
+        "Navigation",
+        "Aircon",
+        "Bluetooth"
+      ]
+    },
+    {
+      "id": 5,
+      "made": "Hyundai",
+      "model": "A5",
+      "wheels": 4,
+      "carType": "sedan",
+      "features": [
+        "Airbags",
+        "Seatbelts",
+        "Navigation",
+        "Aircon",
+        "Bluetooth"
+      ]
+    }
+  ]
 }

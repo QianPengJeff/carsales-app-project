@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MadeService } from '../services/made.service';
 import { ModelService } from '../services/model.service';
 import { WheelsService } from '../services/wheels.service';
@@ -39,7 +39,8 @@ export class EditVehicleDetailsComponent implements OnInit {
               private _madeList: MadeService,
               private _modelList: ModelService,
               private _wheelsList: WheelsService,
-              private _carTypeList: CarTypeService) {
+              private _carTypeList: CarTypeService,
+              private router: Router) {
 
   }
 
@@ -67,6 +68,24 @@ export class EditVehicleDetailsComponent implements OnInit {
   }
 
   saveToDB(){
-    console.log(this.vehicle.features);
+    this.vehicle.made = this.made;
+    this.vehicle.model = this.model;
+    this.vehicle.wheels = this.wheels;
+    this.vehicle.carType = this.carType;
+
+    return fetch('http://localhost:4000/vehicles/' + this.carId, {
+       method: 'PUT',
+       mode: 'cors',
+       body: JSON.stringify(this.vehicle),
+       headers: {
+           'Content-Type': 'application/json'
+       }
+       }).then(res => {
+           setTimeout(_ => {
+             alert("Update succeeded");
+             this.router.navigate(['/']);
+             return res;
+           }, 1000);
+       }).catch(err => err);
   }
 }
