@@ -17,6 +17,7 @@ import { ModelService } from './services/model.service';
 import { WheelsService } from './services/wheels.service';
 import { CarTypeService } from './services/car-type.service';
 import { FeaturesService } from './services/features.service';
+import { UtilityService } from './services/utility.service';
 
 
 const appRoutes: Routes = [
@@ -42,7 +43,12 @@ const appRoutes: Routes = [
       appRoutes
     )
   ],
-  providers: [MadeService,ModelService,WheelsService,CarTypeService,FeaturesService],
+  providers: [MadeService,
+              ModelService,
+              WheelsService,
+              CarTypeService,
+              FeaturesService,
+              UtilityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

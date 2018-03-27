@@ -162,6 +162,16 @@
         "Bluetooth",
         "Seatbelts"
       ]
+    },
+    {
+      "id": 7,
+      "made": "Audi",
+      "model": "A1",
+      "wheels": 4,
+      "carType": "hatchback",
+      "features": [
+        "Navigation"
+      ]
     }
   ]
 }

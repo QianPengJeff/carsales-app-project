@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UtilityService } from '../services/utility.service';
 
 @Component({
   selector: 'app-vehicle-list',
@@ -10,13 +11,13 @@ export class VehicleListComponent implements OnInit {
 
   data = [];
 
-  constructor (private router: Router){
+  constructor (private router: Router, private _arrayLength :UtilityService){
     fetch('http://localhost:4000/vehicles')
       .then(response => response.json())
       .then(json => {
         setTimeout(_ => {
             this.data = json;
-            console.log(this.data);
+            this._arrayLength.setLength(this.data.length);
         }, 1000);
       });
 

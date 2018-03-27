@@ -5,6 +5,7 @@ import { MadeService } from '../services/made.service';
 import { ModelService } from '../services/model.service';
 import { WheelsService } from '../services/wheels.service';
 import { CarTypeService } from '../services/car-type.service';
+import { UtilityService } from '../services/utility.service';
 
 import { FeaturesSelectorComponent } from '../features-selector/features-selector.component';
 
@@ -14,8 +15,6 @@ import { FeaturesSelectorComponent } from '../features-selector/features-selecto
   styleUrls: ['./add-vehicle.component.css']
 })
 export class AddVehicleComponent implements OnInit {
-
-  public carId;
 
   private madeList = [];
 
@@ -40,7 +39,8 @@ export class AddVehicleComponent implements OnInit {
               private _modelList: ModelService,
               private _wheelsList: WheelsService,
               private _carTypeList: CarTypeService,
-              private router: Router) {
+              private router: Router,
+              private _arrayLength :UtilityService) {
 
   }
 
@@ -60,7 +60,7 @@ export class AddVehicleComponent implements OnInit {
 
   saveToDB(){
     let vehicle = {
-      "id": 6,
+      "id": this._arrayLength.getLength() + 1,
       "made": this.made,
       "model": this.model,
       "wheels": this.wheels,
