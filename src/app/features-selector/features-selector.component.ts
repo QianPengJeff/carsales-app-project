@@ -22,14 +22,16 @@ export class FeaturesSelectorComponent implements OnInit {
 
   ngOnInit() {
     let tempList = this._featuresList.getFeaturesData();
-    this.selectedFeaturesList = this.parentData.features;
-
-    for(let i = 0; i < tempList.length; i++) {
-      for (let j = 0; j < this.selectedFeaturesList.length; j++) {
-        if (tempList[i].toString() == this.selectedFeaturesList[j].toString()) {
-            tempList.splice(i,1);
+    if (this.parentData != undefined) {
+      this.selectedFeaturesList = this.parentData;
+      for(let i = 0; i < tempList.length; i++) {
+        for (let j = 0; j < this.selectedFeaturesList.length; j++) {
+          if (tempList[i].toString() == this.selectedFeaturesList[j].toString()) {
+              tempList.splice(i,1);
+          }
         }
       }
+      console.log("a");
     }
     this.availableFeaturesList = tempList;
   }

@@ -93,7 +93,8 @@
       "wheels": "6",
       "carType": "hatchback",
       "features": [
-        "Airbags"
+        "Airbags",
+        "Seatbelts"
       ]
     },
     {
@@ -148,6 +149,18 @@
         "Navigation",
         "Aircon",
         "Bluetooth"
+      ]
+    },
+    {
+      "id": 6,
+      "made": "Audi",
+      "model": "A3",
+      "wheels": 4,
+      "carType": "sedan",
+      "features": [
+        "Airbags",
+        "Bluetooth",
+        "Seatbelts"
       ]
     }
   ]

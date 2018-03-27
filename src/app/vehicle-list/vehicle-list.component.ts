@@ -26,6 +26,10 @@ export class VehicleListComponent implements OnInit {
     this.router.navigate(['edit',car.id]);
   }
 
+  addNewCar(){
+    this.router.navigate(['add']);
+  }
+
   ngOnInit() {
   }
 
