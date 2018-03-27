@@ -13,9 +13,9 @@
     {
       "id": 1,
       "made": "Holden",
-      "model": "A1",
+      "model": "A3",
       "wheels": "6",
-      "carType": "hatchback",
+      "carType": "sedan",
       "features": [
         "Seatbelts"
       ]
@@ -114,6 +114,16 @@
       "features": [
         "Bluetooth",
         "Aircon"
+      ]
+    },
+    {
+      "id": 10,
+      "made": "Audi",
+      "model": "A1",
+      "wheels": 4,
+      "carType": "sedan",
+      "features": [
+        "Seatbelts"
       ]
     }
   ]

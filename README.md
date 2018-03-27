@@ -2,7 +2,7 @@ Carsales APP task by QianPeng
 
 ## setup
 
-Alone of download the project
+Clone or download the project
 
 run ```npm install``` 
 
