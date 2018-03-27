@@ -5,6 +5,8 @@ import { ModelService } from '../services/model.service';
 import { WheelsService } from '../services/wheels.service';
 import { CarTypeService } from '../services/car-type.service';
 
+import { FeaturesSelectorComponent } from '../features-selector/features-selector.component';
+
 
 @Component({
   selector: 'app-edit-vehicle-details',
@@ -15,7 +17,7 @@ export class EditVehicleDetailsComponent implements OnInit {
 
   public carId;
 
-  private vehicle;
+  public vehicle;
 
   private madeList = [];
 

@@ -4,15 +4,15 @@
       <div class="row">
         <div class="col">
           <div class="list-group">
-            <button type="button" class="list-group-item list-group-item-action" *ngFor="let feature of parentData?.features">
+            <button type="button" class="list-group-item list-group-item-action" *ngFor="let feature of selectedFeaturesList">
               {{feature}}
             </button>
           </div>
         </div>
         <div class="col">
           <div class="list-group">
-            <button type="button" class="list-group-item list-group-item-action" *ngFor="let feature of parentData?.features">
-              {{feature}}
+            <button type="button" class="list-group-item list-group-item-action" *ngFor="let feature of availableFeaturesList">
+              {{feature.name}}
             </button>
           </div>
         </div>

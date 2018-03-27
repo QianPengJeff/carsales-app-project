@@ -48,7 +48,7 @@
             </div>
           </div>
         <div class="col">
-            <app-features-selector [parentData]="vehicle"></app-features-selector>
+            <app-features-selector *ngIf="vehicle" [parentData]="vehicle"></app-features-selector>
           </div>
               </div>
           <button class="btn btn-primary">Edit</button>

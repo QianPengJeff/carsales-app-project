@@ -16,6 +16,8 @@ import { MadeService } from './services/made.service';
 import { ModelService } from './services/model.service';
 import { WheelsService } from './services/wheels.service';
 import { CarTypeService } from './services/car-type.service';
+import { FeaturesService } from './services/features.service';
+
 
 const appRoutes: Routes = [
   { path: '', component: VehicleListComponent },
@@ -40,7 +42,7 @@ const appRoutes: Routes = [
       appRoutes
     )
   ],
-  providers: [MadeService,ModelService,WheelsService,CarTypeService],
+  providers: [MadeService,ModelService,WheelsService,CarTypeService,FeaturesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
