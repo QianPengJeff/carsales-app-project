@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { FeaturesService } from '../services/features.service';
 
 @Component({
@@ -10,7 +10,7 @@ export class FeaturesSelectorComponent implements OnInit {
 
   @Input() public parentData;
 
-
+  public childEvent = new EventEmitter();
 
   private availableFeaturesList = [];
 
