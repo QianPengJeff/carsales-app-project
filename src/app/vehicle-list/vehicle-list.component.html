@@ -1,9 +1,18 @@
 <div class="container">
-  <button (click)="addNewCar()" type="button" class="btn btn-primary">Add a Car</button>
     <div class="row">
-      <div class="offset-md-3 col-md-6">
-        <div class="card" *ngFor="let car of data">
-          <h5 class="card-header">Car {{car.id}}</h5>
+      <div class="col">
+        <br/>
+        <button (click)="addNewCar()" type="button" class="btn btn-success float-right">Add a Car</button>
+        <br/>
+        <br/>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let car of data">
+        <div class="card" >
+          <h5 class="card-header">Car {{car.id}}
+            <button (click)="onClickMe(car)" class="btn btn-primary float-right btn-sm">Edit</button>
+          </h5>
           <div class="card-body">
             <p>
               Made: {{car.made}}
@@ -16,10 +25,9 @@
               <br/>
               Features: {{car.features}}
             </p>
-            <button (click)="onClickMe(car)" class="btn btn-primary">Edit</button>
           </div>
         </div>
-
       </div>
+
     </div>
 </div>

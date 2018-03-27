@@ -115,11 +115,9 @@
       "made": "Holden",
       "model": "A2",
       "wheels": 6,
-      "carType": "hatchback",
+      "carType": "sedan",
       "features": [
-        "Airbags",
         "Seatbelts",
-        "Navigation",
         "Aircon"
       ]
     },

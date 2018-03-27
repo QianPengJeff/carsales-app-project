@@ -1,5 +1,5 @@
-<div class="container">
-  add
+<br/>
+<br/>
   <div class="row">
     <div class="col-md-10 offset-md-1">
       <div class="card">
@@ -7,54 +7,54 @@
         <div class="card-body">
           <div class="row">
             <div class="col-md-4">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="madeSelections">Made</label>
-              </div>
-              <select class="custom-select" id="madeSelections" [(ngModel)]="made">
-                <option *ngFor="let made of madeList" [value]="made.name">
-                    {{made.name}}
-                </option>
-              </select>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="madeSelections">Made</label>
             </div>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="modelSelections">Model</label>
-              </div>
-              <select class="custom-select" id="modelSelections" [(ngModel)]="model">
-                <option *ngFor="let model of modelList" [value]="model.name">
-                    {{model.name}}
-                </option>
-              </select>
-            </div>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="wheelsSelections">Wheels</label>
-              </div>
-              <select class="custom-select" id="wheelsSelections" [(ngModel)]="wheels">
-                <option *ngFor="let wheels of wheelsList" [value]="wheels.number">
-                    {{wheels.number}}
-                </option>
-              </select>
-            </div>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="carTypeSelections">Car Type</label>
-              </div>
-              <select class="custom-select" id="carTypeSelections" [(ngModel)]="carType">
-                <option *ngFor="let carType of carTypeList" [value]="carType.name">
-                    {{carType.name}}
-                </option>
-              </select>
-            </div>
+            <select class="custom-select" id="madeSelections" [(ngModel)]="made">
+              <option *ngFor="let made of madeList" [value]="made.name">
+                  {{made.name}}
+              </option>
+            </select>
           </div>
-        <div class="col">
-            <app-features-selector (childEvent)="features=$event" [parentData]="features"></app-features-selector>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="modelSelections">Model</label>
+            </div>
+            <select class="custom-select" id="modelSelections" [(ngModel)]="model">
+              <option *ngFor="let model of modelList" [value]="model.name">
+                  {{model.name}}
+              </option>
+            </select>
           </div>
-              </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="wheelsSelections">Wheels</label>
+            </div>
+            <select class="custom-select" id="wheelsSelections" [(ngModel)]="wheels">
+              <option *ngFor="let wheels of wheelsList" [value]="wheels.number">
+                  {{wheels.number}}
+              </option>
+            </select>
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="carTypeSelections">Car Type</label>
+            </div>
+            <select class="custom-select" id="carTypeSelections" [(ngModel)]="carType">
+              <option *ngFor="let carType of carTypeList" [value]="carType.name">
+                  {{carType.name}}
+              </option>
+            </select>
+          </div>
+        </div>
+      <div class="col">
+          <app-features-selector (childEvent)="features=$event" [parentData]="features"></app-features-selector>
+        </div>
+      </div>
           <button (click)="saveToDB()" class="btn btn-primary">Save</button>
+          <button (click)="cancel()" class="btn btn-danger">Cancel</button>
         </div>
       </div>
     </div>
   </div>
-</div>

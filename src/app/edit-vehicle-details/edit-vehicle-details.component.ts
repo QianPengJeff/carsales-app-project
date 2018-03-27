@@ -88,4 +88,8 @@ export class EditVehicleDetailsComponent implements OnInit {
            }, 1000);
        }).catch(err => err);
   }
+
+  cancel(){
+    this.router.navigate(['/']);
+  }
 }
