@@ -8,8 +8,6 @@ import { CarTypeService } from '../services/car-type.service';
 
 import { FeaturesSelectorComponent } from '../features-selector/features-selector.component';
 
-
-
 @Component({
   selector: 'app-add-vehicle',
   templateUrl: './add-vehicle.component.html',
