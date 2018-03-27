@@ -68,6 +68,7 @@ export class AddVehicleComponent implements OnInit {
       "features": this.features
     }
 
+    //upload the new vehicle to database
     fetch('http://localhost:4000/vehicles/', {
        method: 'POST',
        body: JSON.stringify(vehicle),
@@ -84,6 +85,7 @@ export class AddVehicleComponent implements OnInit {
        }).catch(err => err);
   }
 
+  //cancel function
   cancel(){
     this.router.navigate(['/']);
   }

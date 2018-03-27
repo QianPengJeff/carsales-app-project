@@ -72,7 +72,7 @@ export class EditVehicleDetailsComponent implements OnInit {
     this.vehicle.model = this.model;
     this.vehicle.wheels = this.wheels;
     this.vehicle.carType = this.carType;
-
+    //update the vehicle to database
     return fetch('http://localhost:4000/vehicles/' + this.carId, {
        method: 'PUT',
        mode: 'cors',
@@ -88,7 +88,7 @@ export class EditVehicleDetailsComponent implements OnInit {
            }, 1000);
        }).catch(err => err);
   }
-
+  //cancel
   cancel(){
     this.router.navigate(['/']);
   }

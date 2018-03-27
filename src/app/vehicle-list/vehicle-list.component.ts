@@ -12,6 +12,7 @@ export class VehicleListComponent implements OnInit {
   data = [];
 
   constructor (private router: Router, private _arrayLength :UtilityService){
+    //get vehicle data from database
     fetch('http://localhost:4000/vehicles')
       .then(response => response.json())
       .then(json => {
@@ -24,10 +25,12 @@ export class VehicleListComponent implements OnInit {
   }
 
   onClickMe(car){
+    //redirect to edit page
     this.router.navigate(['edit',car.id]);
   }
 
   addNewCar(){
+    //redirect to add new car page
     this.router.navigate(['add']);
   }
 

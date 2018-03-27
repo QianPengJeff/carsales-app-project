@@ -88,12 +88,11 @@
   "vehicles": [
     {
       "id": 1,
-      "made": "Audi",
+      "made": "Holden",
       "model": "A1",
       "wheels": "6",
       "carType": "hatchback",
       "features": [
-        "Airbags",
         "Seatbelts"
       ]
     },
@@ -169,6 +168,28 @@
       "carType": "hatchback",
       "features": [
         "Navigation"
+      ]
+    },
+    {
+      "id": 8,
+      "made": "Audi",
+      "model": "A1",
+      "wheels": 4,
+      "carType": "hatchback",
+      "features": [
+        "Airbags",
+        "Seatbelts"
+      ]
+    },
+    {
+      "id": 9,
+      "made": "Audi",
+      "model": "A4",
+      "wheels": "6",
+      "carType": "hatchback",
+      "features": [
+        "Bluetooth",
+        "Aircon"
       ]
     }
   ]
