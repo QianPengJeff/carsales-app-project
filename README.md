@@ -1,27 +1,148 @@
-# CarsalesApp
+Carsales APP task by QianPeng
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
+## setup
 
-## Development server
+Alone of download the project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+run ```npm install``` 
 
-## Code scaffolding
+After installed all the dependencies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+run ```json-server --watch --port 4000 api/db.json``` 
 
-## Build
+then open a new terminal tab and run ```ng serve --open```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### db.json (in the api folder)
 
-## Running unit tests
+```{
+  "carType": [
+    {
+      "id": 1,
+      "name": "hatchback"
+    },
+    {
+      "id": 2,
+      "name": "sedan"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": 1,
+      "made": "Holden",
+      "model": "A1",
+      "wheels": "6",
+      "carType": "hatchback",
+      "features": [
+        "Seatbelts"
+      ]
+    },
+    {
+      "id": 2,
+      "made": "Ford",
+      "model": "A3",
+      "wheels": 4,
+      "carType": "hatchback",
+      "features": [
+        "Airbags",
+        "Seatbelts",
+        "Navigation",
+        "Aircon"
+      ]
+    },
+    {
+      "id": 3,
+      "made": "Holden",
+      "model": "A2",
+      "wheels": 6,
+      "carType": "sedan",
+      "features": [
+        "Seatbelts",
+        "Aircon"
+      ]
+    },
+    {
+      "id": 4,
+      "made": "Ford",
+      "model": "A3",
+      "wheels": 4,
+      "carType": "sedan",
+      "features": [
+        "Airbags",
+        "Seatbelts",
+        "Navigation",
+        "Aircon",
+        "Bluetooth"
+      ]
+    },
+    {
+      "id": 5,
+      "made": "Hyundai",
+      "model": "A5",
+      "wheels": 4,
+      "carType": "sedan",
+      "features": [
+        "Airbags",
+        "Seatbelts",
+        "Navigation",
+        "Aircon",
+        "Bluetooth"
+      ]
+    },
+    {
+      "id": 6,
+      "made": "Audi",
+      "model": "A3",
+      "wheels": 4,
+      "carType": "sedan",
+      "features": [
+        "Airbags",
+        "Bluetooth",
+        "Seatbelts"
+      ]
+    },
+    {
+      "id": 7,
+      "made": "Audi",
+      "model": "A1",
+      "wheels": 4,
+      "carType": "hatchback",
+      "features": [
+        "Navigation"
+      ]
+    },
+    {
+      "id": 8,
+      "made": "Audi",
+      "model": "A1",
+      "wheels": 4,
+      "carType": "hatchback",
+      "features": [
+        "Airbags",
+        "Seatbelts"
+      ]
+    },
+    {
+      "id": 9,
+      "made": "Audi",
+      "model": "A4",
+      "wheels": "6",
+      "carType": "hatchback",
+      "features": [
+        "Bluetooth",
+        "Aircon"
+      ]
+    }
+  ]
+}
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### dependencies used
 
-## Running end-to-end tests
+```ngx-bootstrap```
+```json-server```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Web API used
 
-## Further help
+```json-server```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```More details: https://github.com/typicode/json-server```

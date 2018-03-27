@@ -1,58 +1,4 @@
 {
-  "made": [
-    {
-      "id": 1,
-      "name": "Audi"
-    },
-    {
-      "id": 2,
-      "name": "BMW"
-    },
-    {
-      "id": 3,
-      "name": "Ford"
-    },
-    {
-      "id": 4,
-      "name": "Holden"
-    },
-    {
-      "id": 5,
-      "name": "Hyundai"
-    }
-  ],
-  "model": [
-    {
-      "id": 1,
-      "name": "A1"
-    },
-    {
-      "id": 2,
-      "name": "A2"
-    },
-    {
-      "id": 3,
-      "name": "A3"
-    },
-    {
-      "id": 4,
-      "name": "A4"
-    },
-    {
-      "id": 5,
-      "name": "A5"
-    }
-  ],
-  "wheels": [
-    {
-      "id": 1,
-      "number": 4
-    },
-    {
-      "id": 2,
-      "number": 6
-    }
-  ],
   "carType": [
     {
       "id": 1,
@@ -61,28 +7,6 @@
     {
       "id": 2,
       "name": "sedan"
-    }
-  ],
-  "features": [
-    {
-      "id": 1,
-      "name": "Airbags"
-    },
-    {
-      "id": 2,
-      "name": "Seatbelts"
-    },
-    {
-      "id": 3,
-      "name": "Bluetooth"
-    },
-    {
-      "id": 4,
-      "name": "Navigation"
-    },
-    {
-      "id": 5,
-      "name": "Aircon"
     }
   ],
   "vehicles": [
