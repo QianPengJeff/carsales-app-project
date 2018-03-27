@@ -65,4 +65,8 @@ export class EditVehicleDetailsComponent implements OnInit {
         }, 100);
       });
   }
+
+  saveToDB(){
+    console.log(this.vehicle.features);
+  }
 }

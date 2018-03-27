@@ -48,10 +48,10 @@
             </div>
           </div>
         <div class="col">
-            <app-features-selector *ngIf="vehicle" [parentData]="vehicle"></app-features-selector>
+            <app-features-selector *ngIf="vehicle" (childEvent)="vehicle.features=$event" [parentData]="vehicle"></app-features-selector>
           </div>
               </div>
-          <button class="btn btn-primary">Edit</button>
+          <button (click)="saveToDB()" class="btn btn-primary">Save</button>
         </div>
       </div>
     </div>
